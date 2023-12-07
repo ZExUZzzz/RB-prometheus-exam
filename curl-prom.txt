@@ -1,0 +1,10 @@
+root@prometheus:~# curl localhost:9090/metrics | grep "prometheus_target_scrape_pool_targets"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+# HELP prometheus_target_scrape_pool_targets Current number of targets in this scrape pool.
+# TYPE prometheus_target_scrape_pool_targets gauge
+prometheus_target_scrape_pool_targets{scrape_job="cadvisor"} 1
+prometheus_target_scrape_pool_targets{scrape_job="mysqld_exporter"} 1
+prometheus_target_scrape_pool_targets{scrape_job="node_exporter"} 1
+prometheus_target_scrape_pool_targets{scrape_job="prometheus"} 1
+100 61400    0 61400    0     0  6662k      0 --:--:-- --:--:-- --:--:-- 6662k
