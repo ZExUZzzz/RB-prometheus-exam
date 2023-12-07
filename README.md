@@ -5,7 +5,9 @@
 
 ## Exporters logs
 [logs/node_exporter.log](https://github.com/ZExUZzzz/RB-prometheus-exam/blob/main/logs/node_exporter.log) - Node Exporter
+
 [logs/mysqld_exporter.log](https://github.com/ZExUZzzz/RB-prometheus-exam/blob/main/logs/mysqld_exporter.log) - Mysqld Exporter
+
 [logs/cadvisor.log](https://github.com/ZExUZzzz/RB-prometheus-exam/blob/main/logs/cadvisor.log) - cAdvisor
 
 ## Grafana dashboards
