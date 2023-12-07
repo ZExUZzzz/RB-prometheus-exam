@@ -1,0 +1,10 @@
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.584Z caller=mysqld_exporter.go:220 level=info msg="Starting mysqld_exporter" version="(version=0.15.0, branch=HEAD, revision=6ca2a42f97f3403c7788ff4f374430aa267a6b6b)"
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.585Z caller=mysqld_exporter.go:221 level=info msg="Build context" build_context="(go=go1.20.5, platform=linux/amd64, user=root@c4fca471a5b1, date=20230624-04:09:04, tags=netgo)"
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.586Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_status
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.586Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_variables
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.586Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_status
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.587Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmp
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.587Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.587Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.query_response_time
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.588Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
+Dec  7 07:13:53 node1 mysqld_exporter[14052]: ts=2023-12-07T07:13:53.589Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104

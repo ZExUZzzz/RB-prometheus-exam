@@ -1,0 +1,108 @@
+Dec  7 06:54:38 node1 python3[2453]: ansible-file Invoked with path=/opt/node_exporter state=directory mode=0755 recurse=False force=False follow=True modification_time_format=%Y%m%d%H%M.%S access_time_format=%Y%m%d%H%M.%S unsafe_writes=False _original_basename=None _diff_peek=None src=None modification_time=None access_time=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None
+Dec  7 06:54:40 node1 python3[2476]: ansible-get_url Invoked with url=https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz dest=/opt/node_exporter/ mode=0644 force=False http_agent=ansible-httpget use_proxy=True validate_certs=True force_basic_auth=False use_gssapi=False backup=False checksum= timeout=10 unredirected_headers=[] decompress=True use_netrc=True unsafe_writes=False url_username=None url_password=NOT_LOGGING_PARAMETER client_cert=None client_key=None headers=None tmp_dest=None ciphers=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None
+Dec  7 06:54:43 node1 python3[2499]: ansible-ansible.legacy.stat Invoked with path=/opt/node_exporter/ follow=True get_checksum=True checksum_algorithm=sha1 get_mime=True get_attributes=True
+Dec  7 06:54:45 node1 python3[2703]: ansible-ansible.legacy.unarchive Invoked with src=/opt/node_exporter/node_exporter-1.1.2.linux-amd64.tar.gz dest=/opt/node_exporter/ remote_src=True list_files=False keep_newer=False exclude=[] include=[] extra_opts=[] validate_certs=True io_buffer_size=65536 copy=True decrypt=True unsafe_writes=False creates=None mode=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None
+Dec  7 06:54:50 node1 python3[2808]: ansible-ansible.legacy.command Invoked with _raw_params=mv /opt/node_exporter/node_exporter-1.1.2.linux-amd64/node_exporter /opt/node_exporter _uses_shell=False expand_argument_vars=True stdin_add_newline=True strip_empty_ends=True argv=None chdir=None executable=None creates=None removes=None stdin=None
+Dec  7 06:54:52 node1 python3[2849]: ansible-ansible.legacy.stat Invoked with path=/etc/systemd/system/node_exporter.service follow=False get_checksum=True checksum_algorithm=sha1 get_mime=True get_attributes=True
+Dec  7 06:54:54 node1 python3[2868]: ansible-ansible.legacy.copy Invoked with src=/home/user/.ansible/tmp/ansible-tmp-1701932090.5147588-252670-131897974315473/source dest=/etc/systemd/system/node_exporter.service mode=None follow=False _original_basename=node_exporter.service.j2 checksum=ac5b345831c4860f8abf39e2636da331694c4a64 backup=False force=True unsafe_writes=False content=NOT_LOGGING_PARAMETER validate=None directory_mode=None remote_src=None local_follow=None owner=None group=None seuser=None serole=None selevel=None setype=None attributes=None
+Dec  7 06:54:57 node1 python3[2911]: ansible-systemd Invoked with name=node_exporter enabled=True state=started daemon_reload=False daemon_reexec=False scope=system no_block=False force=None masked=None
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.897Z caller=node_exporter.go:178 msg="Starting node_exporter" version="(version=1.1.2, branch=HEAD, revision=b597c1244d7bef49e6f3359c87a56dd7707f6719)"
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.905Z caller=node_exporter.go:179 msg="Build context" build_context="(go=go1.15.8, user=root@f07de8ca602a, date=20210305-09:29:10)"
+Dec  7 06:54:57 node1 node_exporter[2952]: level=warn ts=2023-12-07T06:54:57.909Z caller=node_exporter.go:181 msg="Node Exporter is running as root user. This exporter is designed to run as unpriviledged user, root is not required."
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.909Z caller=filesystem_common.go:74 collector=filesystem msg="Parsed flag --collector.filesystem.ignored-mount-points" flag=^/(dev|proc|sys|var/lib/docker/.+)($|/)
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.909Z caller=filesystem_common.go:76 collector=filesystem msg="Parsed flag --collector.filesystem.ignored-fs-types" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.910Z caller=node_exporter.go:106 msg="Enabled collectors"
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=arp
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=bcache
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=bonding
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=btrfs
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=conntrack
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=cpu
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.911Z caller=node_exporter.go:113 collector=cpufreq
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=diskstats
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=edac
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=entropy
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=fibrechannel
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=filefd
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=filesystem
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=hwmon
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.912Z caller=node_exporter.go:113 collector=infiniband
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=interrupts
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=ipvs
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=loadavg
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=mdadm
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=meminfo
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=netclass
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=netdev
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.913Z caller=node_exporter.go:113 collector=netstat
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.914Z caller=node_exporter.go:113 collector=nfs
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.917Z caller=node_exporter.go:113 collector=nfsd
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.917Z caller=node_exporter.go:113 collector=powersupplyclass
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.917Z caller=node_exporter.go:113 collector=pressure
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.917Z caller=node_exporter.go:113 collector=rapl
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.917Z caller=node_exporter.go:113 collector=schedstat
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.925Z caller=node_exporter.go:113 collector=sockstat
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.925Z caller=node_exporter.go:113 collector=softnet
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.925Z caller=node_exporter.go:113 collector=stat
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.925Z caller=node_exporter.go:113 collector=textfile
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.925Z caller=node_exporter.go:113 collector=thermal_zone
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=time
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=timex
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=udp_queues
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=uname
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=vmstat
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=xfs
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.926Z caller=node_exporter.go:113 collector=zfs
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.927Z caller=node_exporter.go:195 msg="Listening on" address=:9100
+Dec  7 06:54:57 node1 node_exporter[2952]: level=info ts=2023-12-07T06:54:57.929Z caller=tls_config.go:191 msg="TLS is disabled." http2=false
+Dec  7 06:55:00 node1 python3[3030]: ansible-systemd Invoked with name=node_exporter state=restarted daemon_reload=False daemon_reexec=False scope=system no_block=False enabled=None force=None masked=None
+Dec  7 06:55:00 node1 systemd[1]: node_exporter.service: Succeeded.
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.503Z caller=node_exporter.go:178 msg="Starting node_exporter" version="(version=1.1.2, branch=HEAD, revision=b597c1244d7bef49e6f3359c87a56dd7707f6719)"
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.509Z caller=node_exporter.go:179 msg="Build context" build_context="(go=go1.15.8, user=root@f07de8ca602a, date=20210305-09:29:10)"
+Dec  7 06:55:00 node1 node_exporter[3035]: level=warn ts=2023-12-07T06:55:00.510Z caller=node_exporter.go:181 msg="Node Exporter is running as root user. This exporter is designed to run as unpriviledged user, root is not required."
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.512Z caller=filesystem_common.go:74 collector=filesystem msg="Parsed flag --collector.filesystem.ignored-mount-points" flag=^/(dev|proc|sys|var/lib/docker/.+)($|/)
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.513Z caller=filesystem_common.go:76 collector=filesystem msg="Parsed flag --collector.filesystem.ignored-fs-types" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.513Z caller=node_exporter.go:106 msg="Enabled collectors"
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.517Z caller=node_exporter.go:113 collector=arp
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.517Z caller=node_exporter.go:113 collector=bcache
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.517Z caller=node_exporter.go:113 collector=bonding
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.518Z caller=node_exporter.go:113 collector=btrfs
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.521Z caller=node_exporter.go:113 collector=conntrack
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.521Z caller=node_exporter.go:113 collector=cpu
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.521Z caller=node_exporter.go:113 collector=cpufreq
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.521Z caller=node_exporter.go:113 collector=diskstats
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.521Z caller=node_exporter.go:113 collector=edac
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=entropy
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=fibrechannel
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=filefd
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=filesystem
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=hwmon
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=infiniband
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=interrupts
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.522Z caller=node_exporter.go:113 collector=ipvs
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.523Z caller=node_exporter.go:113 collector=loadavg
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=mdadm
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=meminfo
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=netclass
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=netdev
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=netstat
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.525Z caller=node_exporter.go:113 collector=nfs
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=nfsd
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=powersupplyclass
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=pressure
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=rapl
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=schedstat
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.526Z caller=node_exporter.go:113 collector=sockstat
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=softnet
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=stat
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=textfile
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=thermal_zone
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=time
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=timex
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=udp_queues
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.537Z caller=node_exporter.go:113 collector=uname
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.538Z caller=node_exporter.go:113 collector=vmstat
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.538Z caller=node_exporter.go:113 collector=xfs
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.538Z caller=node_exporter.go:113 collector=zfs
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.539Z caller=node_exporter.go:195 msg="Listening on" address=:9100
+Dec  7 06:55:00 node1 node_exporter[3035]: level=info ts=2023-12-07T06:55:00.543Z caller=tls_config.go:191 msg="TLS is disabled." http2=false
