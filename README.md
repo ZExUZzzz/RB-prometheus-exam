@@ -1,9 +1,9 @@
 # RB-prometheus-exam
 
-##Prometheus Config
+## Prometheus Config
 [prometheus.yml](https://github.com/ZExUZzzz/RB-prometheus-exam/blob/main/prometheus.yml) - Конфигурация Prometheus
 
-##Grafana dashboards
+## Grafana dashboards
 Список дашбордов в графане
 ![dashboards](https://github.com/ZExUZzzz/RB-prometheus-exam/blob/main/screenshots/dashboards.png)
 
